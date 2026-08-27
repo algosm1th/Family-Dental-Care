@@ -16,6 +16,11 @@
 html {
     scroll-behavior: smooth;
 }
+#home {
+    animation: scrollup linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
 #consult{
   background-color: #00056d;
   color:white;
