@@ -1,0 +1,649 @@
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% {transform: translateX(-50%); }
+}
+@keyframes scrollup{
+  from{
+    opacity:0;          /*opacity is for transparency*/
+     scale:0.5;
+  }
+  to{
+    opacity:1;
+    scale:1;            /*scale resizes the obj without changing the layout space it already takes*/
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#consult{
+  background-color: #00056d;
+  color:white;
+  padding:3vmin;
+  font-weight:bold;
+  border-radius:20vmin;
+  @media(width <= 500px){
+    padding:1.5vmin;
+  }
+}
+#consult:hover{
+  background-color: #151414;
+  color:rgb(255, 255, 255);
+  transform:translateY(-2%);
+  box-shadow:0 2px 4px rgb(54,53,53);
+  transition:0.25s;
+}
+.nav-btn {
+    color:white;
+    backface-visibility: hidden;
+    font-weight:bold;
+    text-decoration: none;
+}
+.nav-btn:hover{
+  color:#90c0f1;
+}
+span {
+    background-color: aliceblue;
+    padding:3vmin;
+    font-size:small;
+    border-radius:2vmin;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color:black;
+    }
+    @media screen and (width >= 768px){
+        padding:3vmin;
+        font-size:medium;
+    }
+}
+
+span:hover {
+  transform:translateY(-5%);
+  box-shadow: 0 3px 6px rgb(53,54,54);
+  transition:0.5s;
+  background-color:rgb(66, 66, 186);
+  color:white;
+  a {
+    color:white;
+    font-weight:bold;
+  }
+}
+
+#social {
+    height:50px;
+    width:10px;
+}
+
+.blog-text {
+  font-size: 16px;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+
+.blog-text.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+  :root{
+    --bg: #eef1f6;
+    --card-bg: #ffffff;
+    --text-dark: #0e3686;
+    --text-body: #5b6472;
+    --accent: #088587;
+    --radius: 14px;
+     --teal-900: #00056d;
+    --teal-800: #81b6bb;
+    --teal-700: #146157;
+    --mint: #BFF2E6;
+    --gold: #F0B84F;
+    --coral: #FF8A65;
+    --paper: #F4F8F6;
+
+    /* colors formerly supplied by Tailwind utility classes */
+    --blue-900: #1e3a8a;
+    --blue-300: #93c5fd;
+    --gray-50: #f9fafb;
+    --gray-200: #e5e7eb;
+    --gray-500: #6b7280;
+    --red-600: #dc2626;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    
+  }
+
+  .blog-grid{
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .blog-text{
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: scrollup linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .blog-eyebrow{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 10px;
+    
+  }
+
+  .blog-heading{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+    color: var(--text-dark);
+
+  }
+
+  .blog-paragraph{
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--text-body);
+    margin: 0;
+    
+  }
+
+  .blog-image{
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    min-height: 200px;
+    animation: scrollup linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .blog-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .blog-text:hover {
+    transform: translateY(-2%);
+    box-shadow: 0 3px 5px rgb(53, 54, 54);
+    transition: 0.5s;
+  }
+  .blog-image:hover {
+    transform:translateY(-2%);
+    box-shadow: 0 3px 9px rgb(53,54,54);
+    transition: 0.5s;
+    }
+   
+  @media (max-width: 820px){
+    .blog-grid{ grid-template-columns: 1fr; }
+  }
+
+  ul {
+    list-style:disc;
+    padding: 2vmin;
+  }
+
+  dt {
+    font-weight:bold;
+    color:rgb(0, 149, 149);
+  }
+  
+  .carousel-container {
+    background-color: white;
+    padding-block: 3vmin;
+    margin-block: 3vmin;
+    max-width:1920px;
+    overflow:hidden;
+  }
+
+  .card {
+    display: flex;
+    flex: 0 0 auto;
+    font-weight: bold;
+    font-size: large;
+    color: black;
+  }
+
+  .carousel-track {
+    display:flex;
+    gap: 8vmin;
+    animation:scroll 20s linear infinite;
+    @media(screen <= 900px){
+      padding:4vmin;
+      font-weight: bold;
+    }
+  }
+main {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-block:3vmin;
+}
+main h1{
+  font-size:x-large;
+  color:#006d69;
+}
+  .abt-container {
+    max-width:1024px;
+    background-color:white;
+    box-shadow:#5b6472;
+    border-radius:10px;
+    padding-inline:5vmin;
+    padding-block:5vmin;
+    object-fit:cover;
+    @media(width <= 500px){
+      padding:1vmin;
+    }
+  }
+  .abt-container img {
+    @media(width <= 900px){
+      width:400px;
+    }
+  }
+  #abt-greet {
+    font-size:xx-large;
+    color:rgb(17, 115, 115);
+    font-weight:bolder;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #fam-head {
+    font-size:x-large;
+    font-weight:bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(16, 77, 143);
+    margin-block:3vmin;
+  }
+  #abt-para {
+    text-align:center;
+    font-weight:lighter;
+  }
+  .abt-main {
+    @media(width <= 900px){
+      padding:4vmin;
+    }
+  }
+  .abt-main h2 {
+    font-size:large;
+    font-weight:bold;
+    margin-block:3vmin;
+  }
+  
+  #hours {
+    margin-block:20px;
+    padding-inline:1.25rem;
+    padding-block:2.5rem;
+    background-color: var(--gray-50);
+  }
+   footer {
+    background-color: #00056d;
+    color:white;
+    padding-inline:1.25rem;
+    padding-block:3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3vmin;
+
+    @media(width <= 500px){
+
+    }
+   }
+   footer a:hover {
+    color:#5daeff;
+   }
+   #time {
+    margin-block:24px;
+    margin-inline:auto;
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-radius:0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    @media(width <= 900px){
+      padding-inline:3vmin;
+    }
+   }
+   #time-table {
+    padding-inline:2vmin;
+    width:100%;
+    text-align:center;
+   }
+   #time:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 2px 4px rgb(53,54,54);
+    transition: 0.5s;
+   }
+
+/* ===================================================================
+   Rules converted from Tailwind utility classes (kept out of the
+   sections above so the original hand-written CSS stays untouched)
+   =================================================================== */
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+#header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo {
+  width: 16.25rem;
+}
+
+.navbar {
+  background-color: var(--blue-900);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0.75rem;
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-text-wrap {
+  padding-inline: 5rem;
+}
+
+.intro-text {
+  color: black;
+  font-weight: 300;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-inline: 1.25rem;
+  padding-block: 1.25rem;
+  text-align: center;
+}
+
+.stage-heading-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 1.25rem;
+}
+
+.stage-heading {
+  color: var(--blue-900);
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.stage-text-wrap {
+  padding-inline: 5rem;
+}
+
+.stage-text {
+  text-align: center;
+  max-width: 48rem;
+  font-weight: 300;
+}
+
+.services-nav {
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+.list-light {
+  font-weight: 300;
+}
+
+.list-semibold {
+  font-weight: 600;
+}
+
+.list-standard {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding: 0.75rem;
+}
+
+.hours-heading {
+  color: var(--blue-900);
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-align: center;
+  margin-bottom: 0.625rem;
+}
+
+.hours-sub {
+  text-align: center;
+  font-weight: 300;
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.table-row-border {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.td-day-bold-lg {
+  padding-inline: 1.25rem;
+  font-weight: bold;
+}
+
+.td-time-lg {
+  padding-inline: 1.25rem;
+  text-align: right;
+}
+
+.td-day-bold {
+  padding-inline: 1.25rem;
+  font-weight: bold;
+}
+
+.td-time {
+  padding-inline: 1.25rem;
+  text-align: right;
+  font-weight: 300;
+}
+
+.td-closed {
+  padding-inline: 1.25rem;
+  text-align: right;
+  font-weight: 700;
+  color: var(--red-600);
+}
+
+.hours-note {
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.consult-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-block: 1.25rem;
+  padding-inline: 5rem;
+}
+
+#footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap:0.3rem;
+  
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-label {
+  color: var(--blue-300);
+  font-weight: 700;
+}
+
+.footer-label--mt3 {
+  margin-top: 0.1rem;
+}
+
+.footer-label--mt4 {
+  margin-block: 0.6rem;
+}
+
+.footer-value {
+  font-weight: 300;
+}
+
+.footer-maps-row {
+  display: flex;
+  font-size:large;
+}
+
+.footer-maps-row a {
+  text-decoration: none;
+  color:white;
+  font-weight:bolder;
+  margin-top:1.5rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color:white;
+  font-weight:lighter;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  color: white;
+  text-align: center;
+}
+
+/* Responsive breakpoints (md = 768px, xs = 480px) matching the
+   original Tailwind md:/xs: variants */
+
+@media (min-width: 480px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 20rem;
+  }
+
+  .navbar {
+    padding: 1.25rem;
+  }
+
+  .intro-text-wrap {
+    padding-inline: 10rem;
+  }
+
+  .intro-text {
+    padding-inline: 5rem;
+    padding-block: 2.5rem;
+    width: 56rem;
+  }
+
+  .stage-heading-wrap {
+    padding-inline: 2.5rem;
+  }
+
+  .stage-text-wrap {
+    padding-inline: 12.5rem;
+  }
+
+  .services-nav {
+    padding-inline: 2.5rem;
+    padding-block: 0.25rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2.5rem;
+  }
+
+  #hours {
+    padding-inline: 10rem;
+    padding-block: 4rem;
+  }
+
+  #time {
+    padding: 5rem;
+  }
+
+  footer {
+    padding-inline: 4rem;
+    padding-block: 1rem;
+  }
+
+  #footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+.whatsapp {
+  position:fixed;
+  bottom:30px;
+  left:10px;
+  z-index:999;
+}
+#wa-logo {
+ background: none;
+ border-style:none;
+}
+@media (width <= 500px) {
+  /* kept identical to the original #consult nested media rule */
+}
