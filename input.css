@@ -12,20 +12,8 @@
     scale:1;            /*scale resizes the obj without changing the layout space it already takes*/
   }
 }
-@keyframes animate {
-  from{
-    opacity:0.5;          /*opacity is for transparency*/
-  }
-  to{
-    opacity:1;          
-  }
-}
 html {
     scroll-behavior: smooth;
-}
-#home {
-    animation: animate linear;
-  animation-timeline: view(); 
 }
 #consult{
   background-color: #00056d;
