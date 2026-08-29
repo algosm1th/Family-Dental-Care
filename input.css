@@ -399,7 +399,7 @@ main h1{
 }
 
 .stage-text-wrap {
-  padding-inline: 5rem;
+  padding-inline: 8rem;
   @media(width <= 600px){
     padding-inline:2vmin;
   }
