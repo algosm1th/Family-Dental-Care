@@ -25,9 +25,6 @@ body {
   padding:3vmin;
   font-weight:bold;
   border-radius:20vmin;
-  @media(width <= 500px){
-    padding:1.5vmin;
-  }
 }
 #consult:hover{
   background-color: #151414;
