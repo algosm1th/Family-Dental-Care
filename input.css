@@ -42,7 +42,7 @@ html {
 .nav-btn:hover{
   color:#90c0f1;
 }
-span {
+.span {
     background-color: aliceblue;
     padding:3vmin;
     font-size:small;
@@ -58,7 +58,7 @@ span {
     }
 }
 
-span:hover {
+.span:hover {
   transform:translateY(-5%);
   box-shadow: 0 3px 6px rgb(53,54,54);
   transition:0.5s;
