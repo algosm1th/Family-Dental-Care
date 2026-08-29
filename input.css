@@ -39,9 +39,6 @@
 .nav-btn:hover{
   color:#90c0f1;
 }
-p {
-  font-weight:lighter;
-}
 span {
     background-color: aliceblue;
     padding:3vmin;
@@ -120,6 +117,10 @@ html, body {
   overflow-x: hidden;
   max-width: 100%;
 }
+
+  body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
   .blog-grid{
     max-width: 900px;
     margin: 0 auto;
