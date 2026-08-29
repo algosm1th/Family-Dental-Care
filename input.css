@@ -19,6 +19,9 @@
   font-weight:bolder;
   font-size:large;
   border-radius:20vmin;
+  @media(width <= 600px){
+    padding:6vmin;
+  }
 }
 #consult:hover{
   background-color: #151414;
