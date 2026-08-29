@@ -46,6 +46,7 @@ html {
     background-color: aliceblue;
     padding:3vmin;
     font-size:small;
+    border-style:none;
     border-radius:2vmin;
     text-align: center;
     a {
