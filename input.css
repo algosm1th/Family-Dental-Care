@@ -631,7 +631,7 @@ main h1{
 .whatsapp {
   position:fixed;
   bottom:30px;
-  left:10px;
+  left:4vmin;
   z-index:999;
 }
 #wa-logo {
