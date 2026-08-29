@@ -15,10 +15,6 @@
 html {
     scroll-behavior: smooth;
 }
-body {
-  margin:0;
-  padding:0;
-}
 #consult{
   background-color: #00056d;
   color:white;
@@ -119,7 +115,7 @@ span:hover {
     margin: 0;
     background: var(--bg);
     font-family: 'Segoe UI', Arial, sans-serif;
-    
+    padding-inline:0;
   }
 
   .blog-grid{
