@@ -28,3 +28,23 @@ whatsapp.addEventListener('click', () => {
 document.querySelectorAll('*').forEach(el => {
   if (el.scrollWidth > document.documentElement.clientWidth) console.log(el);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('button.span');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      if (!targetId) return;
+
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Keep the URL hash in sync, like the old <a href="#..."> did
+        history.pushState(null, '', `#${targetId}`);
+      } else {
+        console.warn(`No element found with id "${targetId}"`);
+      }
+    });
+  });
+});
