@@ -12,6 +12,9 @@
     scale:1;            /*scale resizes the obj without changing the layout space it already takes*/
   }
 }
+html {
+    scroll-behavior:smooth;
+  }
 #consult{
   background-color: #00056d;
   color:white;
