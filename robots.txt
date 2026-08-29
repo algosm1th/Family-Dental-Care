@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://family-dental-care-multan.com/sitemap.xml
+Sitemap: https://familydentalcaremultan.com/sitemap.xml
