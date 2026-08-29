@@ -280,7 +280,7 @@ main h1{
   }
   .abt-main {
     @media(width <= 900px){
-      padding:6vmin;
+      padding:3rem;
     }
   }
   .abt-main h2 {
