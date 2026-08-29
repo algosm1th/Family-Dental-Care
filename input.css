@@ -230,6 +230,7 @@ html, body {
     display:flex;
     gap: 8vmin;
     animation:scroll 20s linear infinite;
+    font-family:'Times New Roman';
     @media(screen <= 900px){
       padding:4vmin;
       font-weight: bold;
