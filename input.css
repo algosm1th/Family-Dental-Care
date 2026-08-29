@@ -12,9 +12,6 @@
     scale:1;            /*scale resizes the obj without changing the layout space it already takes*/
   }
 }
-html {
-    scroll-behavior: smooth;
-}
 #consult{
   background-color: #00056d;
   color:white;
@@ -107,16 +104,16 @@ span:hover {
     --gray-500: #6b7280;
     --red-600: #dc2626;
   }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
- 
-
-  body{
-    margin: 0;
-    background: var(--bg);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    padding-inline:0;
-  }
-
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
   .blog-grid{
     max-width: 900px;
     margin: 0 auto;
