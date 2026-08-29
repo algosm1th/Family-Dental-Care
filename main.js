@@ -25,3 +25,6 @@ whatsapp.addEventListener('click', () => {
   const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
   window.open(whatsappURL, '_blank','noopener,noreferrer');
 });
+document.querySelectorAll('*').forEach(el => {
+  if (el.scrollWidth > document.documentElement.clientWidth) console.log(el);
+});
