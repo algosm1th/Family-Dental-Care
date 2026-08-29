@@ -36,6 +36,9 @@
 .nav-btn:hover{
   color:#90c0f1;
 }
+p {
+  font-weight:lighter;
+}
 span {
     background-color: aliceblue;
     padding:3vmin;
