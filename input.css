@@ -100,7 +100,6 @@ span:hover {
     --coral: #FF8A65;
     --paper: #F4F8F6;
 
-    /* colors formerly supplied by Tailwind utility classes */
     --blue-900: #1e3a8a;
     --blue-300: #93c5fd;
     --gray-50: #f9fafb;
@@ -109,7 +108,7 @@ span:hover {
     --red-600: #dc2626;
   }
 
-  *{ box-sizing: border-box; }
+ 
 
   body{
     margin: 0;
