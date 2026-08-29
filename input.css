@@ -278,7 +278,7 @@ main h1{
   }
   .abt-main {
     @media(width <= 900px){
-      padding:4vmin;
+      padding:6vmin;
     }
   }
   .abt-main h2 {
