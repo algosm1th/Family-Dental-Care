@@ -379,6 +379,9 @@ main h1{
   padding-inline: 1.25rem;
   padding-block: 1.25rem;
   text-align: center;
+   @media(width <= 600px){
+    padding-inline:2vmin;
+  }
 }
 
 .stage-heading-wrap {
@@ -397,6 +400,9 @@ main h1{
 
 .stage-text-wrap {
   padding-inline: 5rem;
+  @media(width <= 600px){
+    padding-inline:2vmin;
+  }
 }
 
 .stage-text {
