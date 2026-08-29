@@ -334,11 +334,6 @@ main h1{
     transition: 0.5s;
    }
 
-/* ===================================================================
-   Rules converted from Tailwind utility classes (kept out of the
-   sections above so the original hand-written CSS stays untouched)
-   =================================================================== */
-
 .font-bold {
   font-weight: 700;
 }
@@ -567,8 +562,6 @@ main h1{
   text-align: center;
 }
 
-/* Responsive breakpoints (md = 768px, xs = 480px) matching the
-   original Tailwind md:/xs: variants */
 
 @media (min-width: 480px) {
   .services-grid {
