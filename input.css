@@ -22,8 +22,8 @@ body {
 #consult{
   background-color: #00056d;
   color:white;
-  padding:3vmin;
-  font-weight:bold;
+  padding:6vmin;
+  font-weight:bolder;
   border-radius:20vmin;
 }
 #consult:hover{
