@@ -120,6 +120,7 @@ html, body {
 
   body{
     margin:0;
+    background-color: var(--bg);
     font-family: 'Segoe UI', Arial, sans-serif;
   }
   .blog-grid{
@@ -399,7 +400,7 @@ main h1{
 }
 
 .stage-text-wrap {
-  padding-inline: 8rem;
+  padding-inline: 12rem;
   @media(width <= 600px){
     padding-inline:2vmin;
   }
